@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para meu amor</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: url('background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            position: relative;
+        }
+
+        header {
+            background-color: rgba(255, 102, 102, 0.8);
+            color: white;
+            padding: 15px 20px;
+            width: 100%;
+            text-align: center;
+            border-bottom: 2px solid white;
+        }
+
+        .container {
+            margin-top: 20px;
+            max-width: 600px;
+            width: 90%;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            display: none; /* Oculta a mensagem inicialmente */
+        }
+
+        img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .message {
+            font-size: 18px;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .hearts {
+            position: absolute;
+            width: 100%;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            justify-content: space-between;
+            font-size: 50px;
+            opacity: 0.5;
+        }
+
+        .heart {
+            color: #ff6f61;
+        }
+
+        .play-button,
+        .pause-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            color: white;
+            background-color: #ff6f61;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .play-button:hover,
+        .pause-button:hover {
+            background-color: #ff4c4c; /* Cor mais escura em hover */
+            transform: scale(1.05); /* Efeito de aumento */
+        }
+
+        @media (max-width: 600px) {
+            .message {
+                font-size: 16px;
+            }
+
+            .hearts {
+                font-size: 30px;
+            }
+
+            .play-button,
+            .pause-button {
+                font-size: 16px;
+                padding: 8px 16px; /* Ajusta o padding em telas menores */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>De rim, até virar meu amor</h1>
+    </header>
+    <div class="hearts">
+        <div class="heart">❤️</div>
+        <div class="heart">❤️</div>
+    </div>
+    <button class="play-button" onclick="playMusic()">Tocar Música</button>
+    <button class="pause-button" onclick="pauseMusic()">Pausar Música</button>
+    <div class="container" id="messageContainer">
+        <img src="amorrr.JPEG" alt="Te amo minha linda">
+        <div class="message">
+            <p>Linda, sou meio ruim com palavras, sou melhor demonstrando o meu amor por você com atitudes, mas enfim, eu te amo muito!</p>
+             <p>Cada sorriso seu é motivo de animar meu dia. Às vezes eu não estou tão bem, mas um simples "bom dia" seu faz realmente meu dia mudar.</p> 
+             <p>Sabe, nosso namoro tinha muitas coisas pra dar errado: questão de idade, fases da vida, o estilo diferente das nossas famílias. Mas eu digo com toda certeza que eu nunca acertei tão cheio. Você é perfeita, linda, carismática, charmosa, cheirosa, honesta... não tem como descrever a perfeição!</p> 
+             <p>Quero sempre o melhor pra você, pois você merece. Você é como se fosse uma luz, e não só na minha vida, mas na de muita gente.</p>
+              <p>Só pra você ter uma noção, no dia da excursão que você segurou o hinário pra mim, eu fiquei nervoso, ri de nervoso, porque você realmente me encantou.</p> 
+              <p>Enfim, eu só tenho que te agradecer, pois com você eu aprendi muito e quero continuar aprendendo.</p>
+               <p>Quero e vou continuar construindo minha história com você, pois você é tudo que eu preciso na minha vida. Sei que posso contar contigo a qualquer momento, e espero que você saiba que pode contar comigo também, porque, afinal de contas, além de namorados, nós somos melhores amigos um do outro.</p>
+                <p>Linda, eu de verdade não me imagino sem você, e quero sempre ter esse sentimento. Não gosto nem um pouquinho de estar longe de ti, mas infelizmente tem coisas que nós vamos ter que passar, mas isso nós faremos juntos!</p>
+                 <p>Eu só quero deixar claro que EU TE AMO, independente de qualquer coisa. Sempre vou te amar, pois você me mudou! Te amo, meu amor, conte comigo sempre!!! s2</p> 
+                 <p>Como diz a música, "seu cabelo me alucina, e seus olhar me apavora"(seu jorge), pois nunca vi olhos tão bonitos quanto os seus!</p>
+        </div>
+    </div>
+
+    <audio id="audio" loop>
+        <source src="mina do condiminio cortado.mp3" type="audio/mpeg">
+        Seu navegador não suporta o elemento de áudio.
+    </audio>
+
+    <script>
+        const audio = document.getElementById('audio');
+        const messageContainer = document.getElementById('messageContainer');
+
+        function playMusic() {
+            audio.play();
+            messageContainer.style.display = 'block'; // Exibe a mensagem
+        }
+
+        function pauseMusic() {
+            audio.pause();
+        }
+    </script>
+</body>
+
+</html>
